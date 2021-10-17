@@ -1,0 +1,10 @@
+Uncompress the zip file "image" to data > images
+Folder must look like : \datas\images\image_train | \datas\images\image_test
+
+Packages to install
+
+pip install pipreqs
+nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('punkt')
+
