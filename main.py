@@ -1,15 +1,8 @@
-from packages.preprocessing import preprocessing_csv
-from packages.predict import predict, save_to_csv
+import uvicorn
 
 
 def main():
-    file = str(input("Which file do you want to predict?"))
-    if not ".csv" in file:
-        file += ".csv"
-
-    file_pred = preprocessing_csv(file)
-    predictions = predict(file_pred)
-    save_to_csv(file_pred, predictions)
+    uvicorn.run("FastAPI:app", port=8080, host='0.0.0.0', debug=True, reload=True)
 
 
 if __name__ == "__main__":
